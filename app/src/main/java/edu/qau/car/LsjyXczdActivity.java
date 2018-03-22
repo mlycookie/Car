@@ -114,59 +114,17 @@ public class LsjyXczdActivity extends Activity {
     }
     
     public void tj(View view) {
-        
-        if(validate()){
             tjIntf();
-        }
-        
      }
-    
-    public boolean validate(){
 
-//        if(TextUtils.isEmpty(xczdcsd.getText().toString())){
-//            Toast.makeText(LsjyXczdActivity.this,"请输入行车制动初速度",Toast.LENGTH_SHORT).show();
-//            return false;
-//        }
-//
-//        if(TextUtils.isEmpty(xckzmfdd.getText().toString())){
-//            Toast.makeText(LsjyXczdActivity.this,"请输入行车制动MFDD",Toast.LENGTH_SHORT).show();
-//            return false;
-//        }
-//
-//        if(TextUtils.isEmpty(xckzzdjl.getText().toString())){
-//            Toast.makeText(LsjyXczdActivity.this,"请输入行车空载制动距离",Toast.LENGTH_SHORT).show();
-//            return false;
-//        }
-//
-//        if(TextUtils.isEmpty(xczdxtsj.getText().toString())){
-//            Toast.makeText(LsjyXczdActivity.this,"请输入行车制动协调时间",Toast.LENGTH_SHORT).show();
-//            return false;
-//        }
-// 
-//        if(TextUtils.isEmpty(xczdwdxChecked)){
-//            Toast.makeText(LsjyXczdActivity.this,"请选择行车制动稳定性",Toast.LENGTH_SHORT).show();
-//            return false;
-//        }
-//
-//        if(TextUtils.isEmpty(xclszdpdChecked)){
-//            Toast.makeText(LsjyXczdActivity.this,"请选择行车路试制动判定",Toast.LENGTH_SHORT).show();
-//            return false;
-//        }
-        
-        return true;
-    }
-    
-     
-     
-     
     public void jykspz(View view) {
-        jykspzIntf();
+//        jykspzIntf();
     }
-    
+
     public void jyjspz(View view) {
-        jyjspzIntf();
+//        jyjspzIntf();
     }
-    
+
     
     public void jykspzIntf(){
         new XmlAsyncTask().execute(new XmlCallback() {
@@ -188,7 +146,7 @@ public class LsjyXczdActivity extends Activity {
             public String getXtlb() {
                 return "17";
             }
-            
+
             @Override
             public String getUri() {
                 return null;
@@ -224,12 +182,12 @@ public class LsjyXczdActivity extends Activity {
                 String code = XmlUtils.getValue(obj, "code");
                 String message = XmlUtils.getValue(obj, "message");
                 if ("1".equals(code)) {
-                     
+
                 }
                 Toast.makeText(LsjyXczdActivity.this, message, Toast.LENGTH_LONG)
                         .show();
             }
-            
+
         });
     }
 
@@ -237,7 +195,7 @@ public class LsjyXczdActivity extends Activity {
         new XmlAsyncTask().execute(new XmlCallback() {
 
             String foramt = "<?xml version='1.0' encoding='GBK'?><root><vehispara><jylsh>%s</jylsh><jcxdh>%s</jcxdh><fx>1</fx><jyjgbh>%s</jyjgbh><jycs>%s</jycs><hpzl>%s</hpzl><hphm>%s</hphm><clsbdh>%s</clsbdh><jyxm>%s</jyxm><zpzl>%s</zpzl></vehispara></root>";
-            
+
             @Override
             public String getXml() {
 
@@ -258,7 +216,7 @@ public class LsjyXczdActivity extends Activity {
             public String getXtlb() {
                 return "17";
             }
-            
+
             @Override
             public String getUri() {
                 return null;
@@ -294,12 +252,12 @@ public class LsjyXczdActivity extends Activity {
                 String code = XmlUtils.getValue(obj, "code");
                 String message = XmlUtils.getValue(obj, "message");
                 if ("1".equals(code)) {
-                    
+
                 }
                 Toast.makeText(LsjyXczdActivity.this, message, Toast.LENGTH_LONG)
                         .show();
             }
- 
+
         });
     }
 

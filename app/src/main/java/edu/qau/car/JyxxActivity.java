@@ -45,8 +45,26 @@ public class JyxxActivity extends Activity implements View.OnClickListener {
 	}
 
 	public void ckzp(View view) {
-		PzActivity.actionStart(this, cjlb);
 
+		if(isLjy){
+			String type = PreferencesUtils.getUserLsjyType(this);
+			if("R2".equals(type)&& xzcdh == 0){
+				Toast.makeText(this, "请选择驻车坡度", Toast.LENGTH_LONG).show();
+				return;
+			}else if("R2".equals(type)&& xzcdh > 2 ){
+				Toast.makeText(this, "请先正确选择当前检验的驻车坡度！", Toast.LENGTH_LONG).show();
+				return;
+			}
+			String zcpd = "";
+			if("R2".equals(type)){
+				zcpd = xzcdh==1?"1":xzcdh==2?"0":"";
+			}
+			PzActivity.actionStart(this, cjlb,zcpd);
+			
+		}else{
+			PzActivity.actionStart(this, cjlb);
+		}
+		
 	}
 
 	public void back(View view) {

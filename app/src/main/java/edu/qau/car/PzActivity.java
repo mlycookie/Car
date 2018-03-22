@@ -185,10 +185,13 @@ public class PzActivity extends Activity {
         final Intent intent = new Intent(context, PzActivity.class);
         intent.putExtra("bean", cjlb);
         final User user = PreferencesUtils.getUser(context);
-        final ArrayList<String> list = new ArrayList<String>();
-        
         isShowPhoto = true;
-
+        getPhoto(context,cjlb,pdzcZcpd,user,intent);
+    }
+    
+    public static void getPhoto(final Context context, final Cjlb cjlb ,final String pdzcZcpd,final User user,final Intent intent){
+        final ArrayList<String> list = new ArrayList<String>();
+ 
         new WsAsyncTask().execute(new WsCallback() {
 
             String foramt = "<?xml version=\"1.0\" encoding=\"GBK\"?><root><vehispara><jylsh>%s</jylsh><jyjgbh>%s</jyjgbh><zcpd>%s</zcpd><jycs>%s</jycs><jyxm>%s</jyxm></vehispara></root>";
@@ -236,12 +239,6 @@ public class PzActivity extends Activity {
             public void callback(JSONObject obj) {
                 Log.w("car", obj.toString());
                 try {
-                    if("R1".equals(PreferencesUtils.getUserLsjyType(context))){
-                        list.add("0341");
-                        list.add("0343");
-                    } else{
-                        list.add("0345");
-                    }
                     if (obj.getBoolean("ok")) {
                         map.clear();
                         JSONArray array = obj.getJSONArray("Table");
@@ -250,9 +247,20 @@ public class PzActivity extends Activity {
                             list.add(json.getString("zpzl"));
                             map.put(json.getString("zpzl"), json.getString("zplj"));
                         }
-                    } else {
-                        
+                    } 
+                    if("R1".equals(PreferencesUtils.getUserLsjyType(context))){
+                        if(!list.contains("0341")){
+                            list.add("0341");
+                        }
+                        if(!list.contains("0343")){
+                            list.add("0343");
+                        }
+                    } else{
+                        if(!list.contains("0345")){
+                            list.add("0345");
+                        } 
                     }
+                    
                     intent.putExtra("list", list);
                     context.startActivity(intent);
                 } catch (JSONException e) {
@@ -261,7 +269,6 @@ public class PzActivity extends Activity {
                 }
             }
         });
- 
     }
     
     /**
@@ -854,7 +861,7 @@ public class PzActivity extends Activity {
 
             if (!map.isEmpty()) {
                 String zplj = map.get(name);
-                if (zplj.length() > 20) {
+                if (zplj!=null && zplj.length() > 20) {
                     pzwc(AppURL.BASE_URL + zplj);
                 }
             }

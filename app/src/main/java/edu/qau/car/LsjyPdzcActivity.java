@@ -97,68 +97,68 @@ public class LsjyPdzcActivity extends Activity {
     
     public void jypz(View view){
         //zcpd  0-20%，1-15%
-        new XmlAsyncTask().execute(new XmlCallback() {
-            String foramt = "<?xml version='1.0' encoding='GBK'?><root><vehispara><jylsh>%s</jylsh><jcxdh>%s</jcxdh><fx>0</fx><zcpd>1</zcpd><jyjgbh>%s</jyjgbh><jycs>%s</jycs><hpzl>%s</hpzl><hphm>%s</hphm><clsbdh>%s</clsbdh><jyxm>%s</jyxm><zpzl>%s</zpzl></vehispara></root>";
-            @Override
-            public String getXml() {
-                String hpzl = cjlb.getHpzlNum() + "";
-                if (hpzl.length() == 1) {
-                    hpzl = "0" + hpzl;
-                }
-                User user = PreferencesUtils.getUser(LsjyPdzcActivity.this);
-                String xml = String.format(foramt, cjlb.getJylsh(),
-                        cjlb.getXzcdh(),user.getJCZBH(), cjlb.getJycs(),hpzl,cjlb.getHphm(),cjlb.getClsbdh(), JYXM,JYZPZL
-                );
-                Log.w("car", xml);
-                return xml;
-            }
-            @Override
-            public String getXtlb() {
-                return "17";
-            }
-
-            @Override
-            public String getUri() {
-                return null;
-            }
-
-            @Override
-            public String getNamespace() {
-                return null;
-            }
-
-            @Override
-            public String getMethodName() {
-                return "writeObjectOut";
-            }
-
-            @Override
-            public String getJkxlh() {
-                return "00000";
-            }
-
-            @Override
-            public String getJkid() {
-                return "17F73";
-            }
-
-            @Override
-            public String getPara() {
-                return "WriteXmlDoc";
-            }
-
-            @Override
-            public void callback(String obj) {
-                String code = XmlUtils.getValue(obj, "code");
-                String message = XmlUtils.getValue(obj, "message");
-                if ("1".equals(code)) {
-
-                }
-                Toast.makeText(LsjyPdzcActivity.this, message, Toast.LENGTH_LONG)
-                        .show();
-            }
-
-        });
+//        new XmlAsyncTask().execute(new XmlCallback() {
+//            String foramt = "<?xml version='1.0' encoding='GBK'?><root><vehispara><jylsh>%s</jylsh><jcxdh>%s</jcxdh><fx>0</fx><zcpd>1</zcpd><jyjgbh>%s</jyjgbh><jycs>%s</jycs><hpzl>%s</hpzl><hphm>%s</hphm><clsbdh>%s</clsbdh><jyxm>%s</jyxm><zpzl>%s</zpzl></vehispara></root>";
+//            @Override
+//            public String getXml() {
+//                String hpzl = cjlb.getHpzlNum() + "";
+//                if (hpzl.length() == 1) {
+//                    hpzl = "0" + hpzl;
+//                }
+//                User user = PreferencesUtils.getUser(LsjyPdzcActivity.this);
+//                String xml = String.format(foramt, cjlb.getJylsh(),
+//                        cjlb.getXzcdh(),user.getJCZBH(), cjlb.getJycs(),hpzl,cjlb.getHphm(),cjlb.getClsbdh(), JYXM,JYZPZL
+//                );
+//                Log.w("car", xml);
+//                return xml;
+//            }
+//            @Override
+//            public String getXtlb() {
+//                return "17";
+//            }
+//
+//            @Override
+//            public String getUri() {
+//                return null;
+//            }
+//
+//            @Override
+//            public String getNamespace() {
+//                return null;
+//            }
+//
+//            @Override
+//            public String getMethodName() {
+//                return "writeObjectOut";
+//            }
+//
+//            @Override
+//            public String getJkxlh() {
+//                return "00000";
+//            }
+//
+//            @Override
+//            public String getJkid() {
+//                return "17F73";
+//            }
+//
+//            @Override
+//            public String getPara() {
+//                return "WriteXmlDoc";
+//            }
+//
+//            @Override
+//            public void callback(String obj) {
+//                String code = XmlUtils.getValue(obj, "code");
+//                String message = XmlUtils.getValue(obj, "message");
+//                if ("1".equals(code)) {
+//
+//                }
+//                Toast.makeText(LsjyPdzcActivity.this, message, Toast.LENGTH_LONG)
+//                        .show();
+//            }
+//
+//        });
         
     }
 
