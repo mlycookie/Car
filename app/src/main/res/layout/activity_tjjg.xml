@@ -1,0 +1,64 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/ztl" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/layout_margin_bottom"
+        android:layout_marginLeft="@dimen/layout_margin_left"
+        android:layout_marginRight="@dimen/layout_margin_right"
+        android:layout_marginTop="@dimen/layout_margin_top"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/qbhg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="42"
+                android:background="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/jsjy" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="42"
+                android:background="@null"
+                android:onClick="tj"
+                android:scaleType="centerInside"
+                android:src="@drawable/tjjg_tj" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

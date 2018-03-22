@@ -1,0 +1,695 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pz_bj"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="10" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#005ca9"
+            android:gravity="center"
+            android:text="测量值"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#005ca9"
+            android:gravity="center"
+            android:text="标准"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#005ca9"
+            android:gravity="center"
+            android:text="判定结果"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1px"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="10"
+            android:text="外轮廓尺寸长"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <EditText
+            android:id="@+id/wkjc1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <EditText
+            android:id="@+id/wkjc2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <EditText
+            android:id="@+id/wkjc3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1px"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="10"
+            android:text="外轮廓尺寸宽"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <EditText
+            android:id="@+id/wkjk1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <EditText
+            android:id="@+id/wkjk2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <EditText
+            android:id="@+id/wkjk3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1px"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="10"
+            android:text="外轮廓尺寸高"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <EditText
+            android:id="@+id/wkjg1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <EditText
+            android:id="@+id/wkjg2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <EditText
+            android:id="@+id/wkjg3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1px"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="10"
+            android:text="挂车外轮廓尺寸长"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <EditText
+            android:id="@+id/gcc1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <EditText
+            android:id="@+id/gcc2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <EditText
+            android:id="@+id/gcc3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1px"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="10"
+            android:text="挂车外轮廓尺寸宽"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <EditText
+            android:id="@+id/gck1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <EditText
+            android:id="@+id/gck2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <EditText
+            android:id="@+id/gck3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1px"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="10"
+            android:text="挂车外轮廓尺寸高"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <EditText
+            android:id="@+id/gcg1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <EditText
+            android:id="@+id/gcg2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <EditText
+            android:id="@+id/gcg3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="14"
+            android:background="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="4" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="10"
+            android:background="#005ca9"
+            android:gravity="center"
+            android:text="选取挂车"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="10"
+            android:background="#005ca9"
+            android:gravity="center"
+            android:onClick="xmks"
+            android:text="项目开始"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="10"
+            android:background="#005ca9"
+            android:gravity="center"
+            android:onClick="kscl"
+            android:text="开始测量"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="10"
+            android:background="#005ca9"
+            android:gravity="center"
+            android:onClick="cljg"
+            android:text="测量结果"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="4" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="10"
+            android:background="#005ca9"
+            android:gravity="center"
+            android:onClick="scsj"
+            android:text="上传数据"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="10"
+            android:background="#005ca9"
+            android:gravity="center"
+            android:onClick="jsxm"
+            android:text="项目结束"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="10"
+            android:background="#005ca9"
+            android:gravity="center"
+            android:onClick="cz"
+            android:text="重置"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="2" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="10" >
+
+            <ImageButton
+                android:id="@+id/zzs1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/yi_n" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/zzs2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/er_n" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/zzs3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/san_n" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/zzs4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/si_n" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cl_h"
+            android:layout_weight="4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="13" />
+
+        <LinearLayout
+            android:layout_width="@dimen/pz_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:gravity="right" >
+
+            <ImageButton
+                android:layout_width="84dp"
+                android:layout_height="28dp"
+                android:layout_marginRight="20dp"
+                android:background="@null"
+                android:onClick="next"
+                android:scaleType="fitXY"
+                android:src="@drawable/xyb" />
+
+            <ImageButton
+                android:layout_width="84dp"
+                android:layout_height="28dp"
+                android:background="@null"
+                android:onClick="back"
+                android:scaleType="fitXY"
+                android:src="@drawable/pz_fh" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5" />
+    </LinearLayout>
+
+</LinearLayout>

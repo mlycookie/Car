@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    aaptOptions{
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+    defaultConfig {
+        applicationId "edu.qau.car"
+        minSdkVersion 15
+        targetSdkVersion 25
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_7
+            targetCompatibility JavaVersion.VERSION_1_7
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile files('libs/gson.jar')
+    compile files('libs/ksoap2-android-assembly-2.4-jar-with-dependencies.jar')
+    compile files('libs/okhttp-3.1.2.jar')
+    compile files('libs/okio-1.6.0.jar')
+    compile files('libs/picasso-2.5.2.jar')
+}

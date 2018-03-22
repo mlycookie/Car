@@ -1,0 +1,71 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/ztl" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/layout_margin_left"
+        android:layout_marginRight="@dimen/layout_margin_right"
+        android:layout_marginTop="85dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true" >
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/ss_srk"
+                android:textColor="#ffffff" />
+
+            <ImageButton
+                android:layout_width="66dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0"
+                android:background="@null"
+                android:onClick="search"
+                android:scaleType="fitXY"
+                android:src="@drawable/ss" />
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@null"
+            android:onClick="cjlb"
+            android:scaleType="centerInside"
+            android:src="@drawable/cjcl" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:onClick="fjcl"
+            android:scaleType="centerInside"
+            android:src="@drawable/fjcl" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:onClick="hgcl"
+            android:scaleType="centerInside"
+            android:src="@drawable/hgcl" />
+    </LinearLayout>
+
+</FrameLayout>

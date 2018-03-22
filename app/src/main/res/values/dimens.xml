@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="cjlb_height">36dp</dimen>
+    <dimen name="cjlb_height2">42dp</dimen>
+    <dimen name="cd_height">72dp</dimen>
+    <dimen name="jyxx_height">32dp</dimen>
+    <dimen name="jyxm_height">32dp</dimen>
+    <dimen name="pz_wh">96dp</dimen>
+    <dimen name="pz_f">76dp</dimen>
+    <dimen name="pz_width">576dp</dimen>
+    <dimen name="wz_height">20dp</dimen>
+    <dimen name="wz2_height">36dp</dimen>
+    <dimen name="wjhgbhg_height">32dp</dimen>
+    <dimen name="tjjg_margin_top">3dp</dimen>
+    <dimen name="three_grid_unit">24dp</dimen>
+    <dimen name="one_and_a_half_grid_unit">6dp</dimen>
+    <dimen name="layout_margin_bottom">40dp</dimen>
+    <dimen name="layout_margin_left">30dp</dimen>
+    <dimen name="layout_margin_right">25dp</dimen>
+    <dimen name="layout_margin_top">90dp</dimen>
+    <dimen name="cl_h">28dp</dimen>
+
+</resources>

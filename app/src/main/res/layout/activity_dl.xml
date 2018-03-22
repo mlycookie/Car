@@ -1,0 +1,247 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res/edu.qau.car"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <!-- 鐧诲綍鑳屾櫙灞傦紝绛夋瘮渚嬫媺浼革紝瑁佸垏鍛ㄥ洿 -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dl_bj"/>
+
+    <!-- 涓讳綋鑳屾櫙灞傦紝灞呬腑鏄剧ず锛屽乏鍙宠竟璺�12dp锛屽悜涓婃媺32dp -->
+
+    <ImageView
+        android:id="@+id/dl_bk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="-32dp"
+        android:src="@drawable/dl_bk2"/>
+
+    <!-- 涓讳綋鍐呭灞� -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 鐢ㄦ埛鍚嶏紝瀵嗙爜锛岀櫥褰曟暣浣撲负涓�灞傦紝灞呬腑鏄剧ず -->
+
+        <LinearLayout
+            android:id="@+id/dl_zt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:orientation="vertical">
+
+            <!-- 鐢ㄦ埛鍚嶏細宸﹀彸鍚勭┖4/49鍜�3/49, 鏍囩90dp鍥哄畾锛屽叾浠栫┖闂翠娇鐢ㄨ緭鍏ユ濉厖 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="42">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="0"
+                        android:src="@drawable/dl_yhm_l"/>
+
+                    <EditText
+                        android:id="@+id/dl_loginid"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/dl_srk"
+                        android:inputType="number"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"/>
+            </LinearLayout>
+            <!-- 瀵嗙爜锛氬乏鍙冲悇绌�4/49鍜�3/49, 鏍囩90dp鍥哄畾锛屽叾浠栫┖闂翠娇鐢ㄨ緭鍏ユ濉厖 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="42">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="0"
+                        android:src="@drawable/dl_mm_l"/>
+
+                    <EditText
+                        android:id="@+id/dl_loginpwd"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/dl_srk"
+                        android:inputType="number"
+                        android:password="true"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="42">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="39dp"
+                        android:layout_weight="0"
+                        android:src="@drawable/dl_gw_l"/>
+
+                    <org.angmarch.views.NiceSpinner
+                        android:id="@+id/gw"
+                        android:layout_width="0dp"
+                        android:layout_height="39dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        app:arrowTint="#0000ff"
+                        app:textTint="#0000ff"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"/>
+            </LinearLayout>
+            <!-- 鐧诲綍鎸夐挳锛氬乏鍙冲悇绌�4/49鍜�3/49, 鍏朵粬绌洪棿浣跨敤鎸夐挳濉厖 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"/>
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="42"
+                    android:background="@null"
+                    android:onClick="dl"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/dl_dl"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 璁颁綇瀵嗙爜涓庤嚜鍔ㄧ櫥褰曪紝濮嬬粓鍦ㄧ櫥褰曟寜閽笅14dp锛屾渶鍙充晶鍗�2/17锛屽楂樺浐瀹氾紝闂磋窛25dp -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dl_zt"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="14dp"
+            android:gravity="right">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="15"
+                android:gravity="right">
+
+                <Button
+                    android:id="@+id/dl_bt_set_url"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:background="@null"
+                    android:text="设置服务器地址"
+                    android:textColor="#fff"
+                    android:textSize="12sp"/>
+                <!--<CheckBox-->
+                <!--android:layout_width="80dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:layout_marginRight="25dp"-->
+                <!--android:background="@drawable/dl_bcmm"-->
+                <!--android:button="@null" />-->
+
+                <!--<CheckBox-->
+                <!--android:layout_width="80dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:background="@drawable/dl_dddl"-->
+                <!--android:button="@null" />-->
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- copyright灞傦紝濮嬬粓璺濆簳閮�50dp -->
+
+    <!--<ImageView-->
+        <!--android:layout_width="120dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|center_horizontal"-->
+        <!--android:layout_marginBottom="50dp"-->
+        <!--android:src="@drawable/dl_cp"/>-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:text="Copyright © 易车通"
+        android:textColor="#173652"
+        android:textSize="12sp"
+        />
+</FrameLayout>

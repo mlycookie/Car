@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">机动车安全技术检验</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_zjm">ZjmActivity</string>
+    <string name="title_activity_jyxx">JyxxActivity</string>
+    <string name="title_activity_jyxm">JyxmActivity</string>
+    <string name="title_activity_pz">PzActivity</string>
+    <string name="title_activity_tjjg">TjjgActivity</string>
+    <string name="title_activity_ckzp">CkzpActivity</string>
+    <string name="title_activity_ck">CkActivity</string>
+    <string name="title_activity_volley">VolleyActivity</string>
+    <string name="title_activity_confirm">ConfirmActivity</string>
+    <string name="title_activity_loading">LoadingActivity</string>
+    <string name="title_activity_cl">ClActivity</string>
+    <string name="title_activity_lsjyxmxz">LsjyXmxzActivity</string>
+    <string name="title_activity_lsjyzjm">LsjyZjmActivity</string>
+    <string name="title_activity_lsjy_xczd">LsjyXczdActivity</string>
+</resources>

@@ -1,0 +1,226 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/ztl" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_margin_bottom"
+            android:layout_marginLeft="@dimen/layout_margin_left"
+            android:layout_marginRight="@dimen/layout_margin_right"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="28dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="计时时间："
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    />
+
+                <Chronometer 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:format="00分:00秒"
+                    android:textColor="#ffffff"
+                    android:id="@+id/timer"/>
+ 
+
+            </LinearLayout>
+
+<!--  计时 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="28dp"
+                android:layout_gravity="center"
+                >
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:background="@null"
+                    android:onClick="ksjs"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ksjs" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:background="@null"
+                    android:onClick="tzjs"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/tzjs" />
+            </LinearLayout>
+
+            <!--  拍照 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="center"
+                >
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:background="@null"
+                    android:onClick="jypz"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/jypz" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:background="@null"
+                    android:onClick="ckzp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/pdzc_ckzp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/layout_margin_bottom"
+            android:layout_marginLeft="@dimen/layout_margin_left"
+            android:layout_marginRight="@dimen/layout_margin_right"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:layout_alignParentBottom="true"
+            >
+
+            <!--路试驻车制动判定 -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/wz_height"
+                android:scaleType="fitStart"
+                android:text="路试驻车制动判定"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"
+                />
+
+            <RadioGroup
+                android:id="@+id/zczdpd_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="@dimen/tjjg_margin_top"
+                android:layout_weight="0"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/wj"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/wjhgbhg_height"
+                    android:layout_weight="15"
+                    android:button="@null"
+                    android:scaleType="fitXY"
+                    android:tag="0"
+                    android:background="@drawable/wj" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:id="@+id/hg"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/wjhgbhg_height"
+                    android:layout_weight="15"
+                    android:button="@null"
+                    android:scaleType="fitXY"
+                    android:tag="1"
+                    android:checked="true"
+                    android:background="@drawable/hg" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:id="@+id/bhg"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/wjhgbhg_height"
+                    android:layout_weight="15"
+                    android:button="@null"
+                    android:scaleType="fitXY"
+                    android:tag="2"
+                    android:background="@drawable/bhg" />
+            </RadioGroup>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:background="@null"
+                    android:onClick="jsjy"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/jsjy" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:background="@null"
+                    android:onClick="tj"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/tjjg_tj" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+    
+    
+</FrameLayout>

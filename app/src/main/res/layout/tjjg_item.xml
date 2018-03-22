@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/bt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wz_height"
+        android:layout_weight="0"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="@dimen/tjjg_margin_top"
+        android:layout_weight="0"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/wj"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/wjhgbhg_height"
+            android:layout_weight="15"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/wj_n" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/hg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/wjhgbhg_height"
+            android:layout_weight="15"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/hg_n" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/bhg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/wjhgbhg_height"
+            android:layout_weight="15"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/bhg_n" />
+    </LinearLayout>
+
+</LinearLayout>
