@@ -75,17 +75,20 @@ public class DlActivity extends Activity implements WsCallback {
                 editor.putString("user", userJson.toString());
                 editor.commit();
 
-                Intent intent = null;
-                switch ( rylb[gw.getSelectedIndex()]){
-                    case 15:
-                        intent = new Intent(this, LsjyXmxzActivity.class);
-                        startActivity(intent);
-                        break;
-                    default:
-                        intent = new Intent(this, ZjmActivity.class);
-                        startActivity(intent);
-                        break;
-                }
+                Intent intent  = new Intent(this, ZjmActivity.class);
+                startActivity(intent);
+                
+//                switch ( rylb[gw.getSelectedIndex()]){
+//                    case 15:
+//                        intent = new Intent(this, LsjyXmxzActivity.class);
+//                        startActivity(intent);
+//                        break;
+//                    default:
+//                        intent = new Intent(this, ZjmActivity.class);
+//                        startActivity(intent);
+//                        break;
+//                }
+                
             } else {
                 Toast.makeText(this, "用户名或密码错误", Toast.LENGTH_LONG).show();
             }

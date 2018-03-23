@@ -249,9 +249,9 @@ public class LsjyPdzcActivity extends Activity {
                 String code = XmlUtils.getValue(obj, "code");
                 String message = XmlUtils.getValue(obj, "message");
                 if ("1".equals(code)) {
-                    Intent i = new Intent(LsjyPdzcActivity.this,LsjyZjmActivity.class);
+                    Intent i = new Intent(LsjyPdzcActivity.this,LsjyXmxzActivity.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    i.putExtra("flag","R2");
+                    i.putExtra("bean", cjlb);
                     startActivity(i);
                     finish();
                 } else {

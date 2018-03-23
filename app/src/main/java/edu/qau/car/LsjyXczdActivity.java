@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -81,6 +82,9 @@ public class LsjyXczdActivity extends Activity {
     }
 
     public String getEditText(EditText editText){
+        if(TextUtils.isEmpty(editText.getText().toString())){
+            return "0" ;
+        }
         return editText.getText().toString();
     }
     
@@ -114,8 +118,30 @@ public class LsjyXczdActivity extends Activity {
     }
     
     public void tj(View view) {
+        if(validate()){
             tjIntf();
+        }
      }
+    public boolean validate(){
+
+        if(TextUtils.isEmpty(xczdcsd.getText().toString())){
+            Toast.makeText(LsjyXczdActivity.this,"请输入行车制动初速度",Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        if(TextUtils.isEmpty(xckzmfdd.getText().toString()) && TextUtils.isEmpty(xckzzdjl.getText().toString())){
+            Toast.makeText(LsjyXczdActivity.this,"请输入行车制动MFDD或行车空载制动距离",Toast.LENGTH_SHORT).show();
+            return false;
+        }
+ 
+        if(TextUtils.isEmpty(xczdxtsj.getText().toString())){
+            Toast.makeText(LsjyXczdActivity.this,"请输入行车制动协调时间",Toast.LENGTH_SHORT).show();
+            return false;
+        }
+ 
+        return true;
+    }
+
 
     public void jykspz(View view) {
 //        jykspzIntf();
@@ -400,9 +426,9 @@ public class LsjyXczdActivity extends Activity {
                 String code = XmlUtils.getValue(obj, "code");
                 String message = XmlUtils.getValue(obj, "message");
                 if ("1".equals(code)) {
-                    Intent i = new Intent(LsjyXczdActivity.this,LsjyZjmActivity.class);
+                    Intent i = new Intent(LsjyXczdActivity.this,LsjyXmxzActivity.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    i.putExtra("flag","R1");
+                    i.putExtra("bean", cjlb);
                     startActivity(i);
                     finish();
                 } else {

@@ -82,19 +82,12 @@ public class JyxxActivity extends Activity implements View.OnClickListener {
 		}
 	}
 
-	public void jsjy(View view) {
-		if(isLjy){
-			Intent intent = new Intent(this, LsjyXmxzActivity.class);
-			intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-			intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			startActivity(intent);
-		}else{
-			Intent intent = new Intent(this, ZjmActivity.class);
-			intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-			intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			startActivity(intent);
-		}
-	}
+	public void fhsy(View view) {
+		Intent intent = new Intent(this, ZjmActivity.class);
+		intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+		intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(intent);
+ 	}
 	
 	public boolean isPdzc(){
 		if(isLjy) {

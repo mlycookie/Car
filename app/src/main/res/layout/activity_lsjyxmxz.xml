@@ -14,12 +14,58 @@
         android:layout_marginRight="@dimen/layout_margin_right"
         android:layout_marginTop="85dp"
         android:orientation="vertical" >
+        
+        <TextView
+            android:id="@+id/jylsh"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cjlb_height"
+            android:background="@drawable/jylsh"
+            android:gravity="center_vertical"
+            android:textColor="#ffffff" />
 
+        <TextView
+            android:id="@+id/hphm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cjlb_height"
+            android:background="@drawable/hphm"
+            android:gravity="center_vertical" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"
+            >
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:background="@null"
+                android:onClick="lsgcks"
+                android:scaleType="centerInside"
+                android:src="@drawable/jykspz" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:background="@null"
+                android:onClick="lsgcjs"
+                android:scaleType="centerInside"
+                android:src="@drawable/jyjspz" />
+        </LinearLayout>
+        
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:background="@null"
             android:scaleType="centerInside"
             android:src="@drawable/lsxmxz" />

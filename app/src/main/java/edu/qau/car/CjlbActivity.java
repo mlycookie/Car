@@ -247,8 +247,11 @@ public class CjlbActivity extends Activity {
 				User user = PreferencesUtils.getUser(CjlbActivity.this);
 				if (user.getRYLB().equals("10")) {
 					ClActivity.actionStart(CjlbActivity.this, list.get(position));
-				}
-				else{
+				}else if(user.getRYLB().equals("15")){
+					Intent intent = new Intent(CjlbActivity.this, LsjyXmxzActivity.class);
+					intent.putExtra("bean", list.get(position));
+					startActivity(intent);
+				}else{
 					Intent intent = new Intent(CjlbActivity.this, JyxxActivity.class);
 					intent.putExtra("bean", list.get(position));
 					startActivity(intent);

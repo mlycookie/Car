@@ -2,14 +2,10 @@ package edu.qau.car;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.opengl.Visibility;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ZjmActivity extends Activity {
@@ -38,6 +34,7 @@ public class ZjmActivity extends Activity {
 	public void back(View view) {
 		//finish();
 		Intent intent = new Intent(this,DlActivity.class);
+		intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
 		startActivity(intent);
 		finish();
 	}
