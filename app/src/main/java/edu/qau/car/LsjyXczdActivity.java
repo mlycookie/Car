@@ -114,7 +114,7 @@ public class LsjyXczdActivity extends Activity {
     }
     
     public void ckzp(View view){
-        PzActivity.actionStart(LsjyXczdActivity.this, cjlb,"");
+        PzActivity.actionStart(LsjyXczdActivity.this, cjlb,"",false);
     }
     
     public void tj(View view) {

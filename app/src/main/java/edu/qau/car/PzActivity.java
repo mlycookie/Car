@@ -71,7 +71,8 @@ public class PzActivity extends Activity {
     private float xMove;
     private boolean isContent2Visible = false;
     private float xUp;
-    private static boolean isShowPhoto;
+    private static boolean isNextStep;
+    private static String zcpd;
     
     private LinearLayout bt1;
     private LinearLayout pz1;
@@ -93,7 +94,7 @@ public class PzActivity extends Activity {
         finish();
     }
 
-    public void tj(View view) {
+    public void next(View view) {
         /*
          * if (bundle.size() == list.size()) { Intent intent = new Intent(this,
 		 * ConfirmActivity.class); intent.putExtra("message", "拍照完成了吗？");
@@ -181,11 +182,12 @@ public class PzActivity extends Activity {
      * @param context
      * @param cjlb
      */
-    public static void actionStart(final Context context, final Cjlb cjlb ,final String pdzcZcpd) {
+    public static void actionStart(final Context context, final Cjlb cjlb ,final String pdzcZcpd ,boolean isNext) {
         final Intent intent = new Intent(context, PzActivity.class);
         intent.putExtra("bean", cjlb);
         final User user = PreferencesUtils.getUser(context);
-        isShowPhoto = true;
+        isNextStep = isNext;
+        zcpd = pdzcZcpd;
         getPhoto(context,cjlb,pdzcZcpd,user,intent);
     }
     
@@ -489,9 +491,8 @@ public class PzActivity extends Activity {
 
 //        initValues();
         
-        if(isShowPhoto){
+        if(!isNextStep){
             next.setVisibility(View.GONE);
-//            getPhoto();
         }
         
     }
@@ -533,26 +534,20 @@ public class PzActivity extends Activity {
 
     }
 
-    public void takephoto(){
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED)
-        {
+    public void takephoto() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED ||
+                ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.CAMERA},
                     MY_PERMISSIONS_REQUEST);
-
-        }else {
+        } else {
             createFile();
         }
     }
     
     public void pic(PzItem item) {
-
         this.item = item;
-
         takephoto();
-
     }
     
     public void createFile(){
@@ -737,7 +732,22 @@ public class PzActivity extends Activity {
             }
         } else if (requestCode == CONFIRM) {
             if (resultCode == Activity.RESULT_OK) {
-                TjjgActivity.actionStart(this, cjlb);
+                if(PreferencesUtils.isLsy(PzActivity.this)){
+                    if("R1".equals(PreferencesUtils.getUserLsjyType(PzActivity.this))){
+                        Intent intent = new Intent(PzActivity.this,LsjyXczdActivity.class);
+                        intent.putExtra("bean", cjlb);
+                        startActivity (intent );
+                        finish();
+                    }else if("R2".equals(PreferencesUtils.getUserLsjyType(PzActivity.this))){
+                        Intent intent = new Intent(PzActivity.this,LsjyPdzcActivity.class);
+                        intent.putExtra("bean", cjlb);
+                        intent.putExtra("zcpd", zcpd);
+                        startActivity (intent );
+                        finish();
+                    }
+                }else{
+                    TjjgActivity.actionStart(this, cjlb);
+                }
             }
         } 
     }

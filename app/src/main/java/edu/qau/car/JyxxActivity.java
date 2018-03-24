@@ -59,7 +59,7 @@ public class JyxxActivity extends Activity implements View.OnClickListener {
 			if("R2".equals(type)){
 				zcpd = xzcdh==1?"1":xzcdh==2?"0":"";
 			}
-			PzActivity.actionStart(this, cjlb,zcpd);
+			PzActivity.actionStart(this, cjlb,zcpd,true);
 			
 		}else{
 			PzActivity.actionStart(this, cjlb);

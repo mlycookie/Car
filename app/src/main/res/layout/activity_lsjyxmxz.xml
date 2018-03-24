@@ -45,7 +45,7 @@
                 android:background="@null"
                 android:onClick="lsgcks"
                 android:scaleType="centerInside"
-                android:src="@drawable/jykspz" />
+                android:src="@drawable/lsgcks" />
 
             <TextView
                 android:layout_width="0dp"
@@ -59,7 +59,7 @@
                 android:background="@null"
                 android:onClick="lsgcjs"
                 android:scaleType="centerInside"
-                android:src="@drawable/jyjspz" />
+                android:src="@drawable/lsgcjs" />
         </LinearLayout>
         
         <ImageButton

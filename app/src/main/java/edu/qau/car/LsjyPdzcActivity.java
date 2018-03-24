@@ -163,7 +163,7 @@ public class LsjyPdzcActivity extends Activity {
     }
 
     public void ckzp(View view){
-        PzActivity.actionStart(LsjyPdzcActivity.this, cjlb ,zcpd);
+        PzActivity.actionStart(LsjyPdzcActivity.this, cjlb ,zcpd,false);
     }
 
     @Override
