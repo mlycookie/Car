@@ -71,7 +71,7 @@ public class PzActivity extends Activity {
     private float xMove;
     private boolean isContent2Visible = false;
     private float xUp;
-    private static boolean isNextStep;
+    private static boolean isNextStep = true ;
     private static String zcpd;
     
     private LinearLayout bt1;
@@ -82,6 +82,9 @@ public class PzActivity extends Activity {
 
     private LinearLayout bt3;
     private LinearLayout pz3;
+
+    private LinearLayout bt4;
+    private LinearLayout pz4;
 
     private PzItem item;
 
@@ -136,6 +139,7 @@ public class PzActivity extends Activity {
         xm.add(new Holder("0119", R.drawable.d0119_n, R.drawable.d0119_p));
         xm.add(new Holder("0120", R.drawable.d0120_n, R.drawable.d0120_p));
         xm.add(new Holder("0121", R.drawable.d0121_n, R.drawable.d0121_p));
+        xm.add(new Holder("0122", R.drawable.d0122_n, R.drawable.d0122_p));
         xm.add(new Holder("0126", R.drawable.d0126_n, R.drawable.d0126_p));
         xm.add(new Holder("0127", R.drawable.d0127_n, R.drawable.d0127_p));
         xm.add(new Holder("0128", R.drawable.d0128_n, R.drawable.d0128_p));
@@ -395,11 +399,13 @@ public class PzActivity extends Activity {
         View page1 = inflater.inflate(R.layout.item_pz_layout, null, false);
         View page2 = inflater.inflate(R.layout.item_pz_layout, null, false);
         View page3 = inflater.inflate(R.layout.item_pz_layout, null, false);
+        View page4 = inflater.inflate(R.layout.item_pz_layout, null, false);
+        
         mPageList = new ArrayList<>();
         mPageList.add(page1);
         mPageList.add(page2);
         mPageList.add(page3);
-
+        mPageList.add(page4);
 
         bt1 = (LinearLayout) page1.findViewById(R.id.bt);
         pz1 = (LinearLayout) page1.findViewById(R.id.pz);
@@ -407,8 +413,11 @@ public class PzActivity extends Activity {
         pz2 = (LinearLayout) page2.findViewById(R.id.pz);
         bt3 = (LinearLayout) page3.findViewById(R.id.bt);
         pz3 = (LinearLayout) page3.findViewById(R.id.pz);
+        bt4 = (LinearLayout) page4.findViewById(R.id.bt);
+        pz4 = (LinearLayout) page4.findViewById(R.id.pz);
 
         ArrayList<String> nums = getIntent().getStringArrayListExtra("list");
+        
         for (String string : nums) {
             for (Holder holder : xm) {
                 if (string.equals(holder.name)) {
@@ -417,7 +426,6 @@ public class PzActivity extends Activity {
                 }
             }
         }
-
 
         //第一页
         for (int i = 0; i < 6 && i < list.size(); i++) {
@@ -454,7 +462,7 @@ public class PzActivity extends Activity {
         }
 
         //第三页
-        if (list.size() > 12 && list.size() < 18) {
+        if (list.size() > 12 ) {
             for (int i = 12; i < 18 && i < list.size(); i++) {
                 if (i != 17) {
                     new PzItem(this, bt3, 2, pz3, list.get(i));
@@ -467,6 +475,24 @@ public class PzActivity extends Activity {
                     new BlankItem(this, bt3, 2, pz3);
                 } else {
                     new BlankItem(this, bt3, 3, pz3);
+                }
+            }
+        }
+
+        //第四页
+        if (list.size() > 18 ) {
+            for (int i = 18; i < 24 && i < list.size(); i++) {
+                if (i != 23) {
+                    new PzItem(this, bt4, 2, pz4, list.get(i));
+                } else {
+                    new PzItem(this, bt4, 3, pz4, list.get(i));
+                }
+            }
+            for (int i = list.size(); i < 24; i++) {
+                if (i != 23) {
+                    new BlankItem(this, bt4, 2, pz4);
+                } else {
+                    new BlankItem(this, bt4, 3, pz4);
                 }
             }
         }
@@ -502,7 +528,7 @@ public class PzActivity extends Activity {
 
         @Override
         public int getCount() {
-            return 3;
+            return 4;
         }
 
         @Override
