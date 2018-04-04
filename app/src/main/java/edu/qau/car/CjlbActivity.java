@@ -224,10 +224,11 @@ public class CjlbActivity extends Activity {
 
 		isLjy = PreferencesUtils.isLsy(this);
 		if(isLjy){
-			userInfo.setText(PreferencesUtils.getUserLsyInfo(this));
-		}else{
 			userInfo.setText(PreferencesUtils.getUserInfo(this));
 		}
+//		else{
+//			userInfo.setText(PreferencesUtils.getUserInfo(this));
+//		}
 
 		String array = getIntent().getStringExtra("array");
 		Log.w("car", array);
@@ -289,6 +290,9 @@ public class CjlbActivity extends Activity {
 				bean.setZt(Integer.parseInt(jsonObject.getString("iswg")));
 				bean.setIsdpdt(Integer.parseInt(jsonObject.getString("isdpdt")));
 				bean.setIsdp(Integer.parseInt(jsonObject.getString("isdp")));
+				bean.setIsls(Integer.parseInt(jsonObject.getString("isls")));
+				bean.setIspdzc(Integer.parseInt(jsonObject.getString("ispdzc")));
+				
 				String jycs = jsonObject.getString("jycs");
 				if (null == jycs || "".equals(jycs)) {
 					bean.setJycs("0");
@@ -370,21 +374,49 @@ public class CjlbActivity extends Activity {
 				holder.dpdt.setBackgroundResource(R.drawable.dpdtfj);
 			}
 
-			if (list.get(arg0).getIsdp() == 0) {
-				holder.dp.setBackgroundResource(R.drawable.dpbjc);
-			} else if (list.get(arg0).getIsdp() == 1) {
-				holder.dp.setBackgroundResource(R.drawable.dpdjc);
-			} else if (list.get(arg0).getIsdp() == 2) {
-				holder.dp.setBackgroundResource(R.drawable.dpyjc);
-			}
-//			else if (list.get(arg0).getIsdp() == 3) {
-//				holder.dp.setBackgroundResource(R.drawable.dpfj);
-//			}
-			
 			if(isLjy){
-				holder.xczd.setBackgroundResource(R.drawable.xczddjc);
-				holder.pdzc.setBackgroundResource(R.drawable.pdzcyjc);
+				if (list.get(arg0).getIsdp() == 0) {
+					holder.dp.setBackgroundResource(R.drawable.dpbjc);
+				} else if (list.get(arg0).getIsdp() == 1) {
+					holder.dp.setBackgroundResource(R.drawable.dpdjc);
+				} else if (list.get(arg0).getIsdp() == 2) {
+					holder.dp.setBackgroundResource(R.drawable.dpyjc);
+				} else if (list.get(arg0).getIsdp() == 3) {
+					holder.dp.setBackgroundResource(R.drawable.dpfj);
+				}
+
+				if (list.get(arg0).getIsls() == 0) {
+					holder.xczd.setBackgroundResource(R.drawable.xczdbjc);
+				} else if (list.get(arg0).getIsls() == 1) {
+					holder.xczd.setBackgroundResource(R.drawable.xczddjc);
+				} else if (list.get(arg0).getIsls() == 2) {
+					holder.xczd.setBackgroundResource(R.drawable.xczdyjc);
+				} else if (list.get(arg0).getIsls() == 3) {
+					holder.xczd.setBackgroundResource(R.drawable.xczdfj);
+				}
+
+				if (list.get(arg0).getIspdzc() == 0) {
+					holder.pdzc.setBackgroundResource(R.drawable.pdzcbjc);
+				} else if (list.get(arg0).getIspdzc() == 1) {
+					holder.pdzc.setBackgroundResource(R.drawable.pdzcdjc);
+				} else if (list.get(arg0).getIspdzc() == 2) {
+					holder.pdzc.setBackgroundResource(R.drawable.pdzcyjc);
+				} else if (list.get(arg0).getIspdzc() == 3) {
+					holder.pdzc.setBackgroundResource(R.drawable.pdzcfj);
+				}
+				
+			}else{
+				if (list.get(arg0).getIsdp() == 0) {
+					holder.dp.setBackgroundResource(R.drawable.dpbjc1);
+				} else if (list.get(arg0).getIsdp() == 1) {
+					holder.dp.setBackgroundResource(R.drawable.dpdjc1);
+				} else if (list.get(arg0).getIsdp() == 2) {
+					holder.dp.setBackgroundResource(R.drawable.dpyjc1);
+				} else if (list.get(arg0).getIsdp() == 3) {
+					holder.dp.setBackgroundResource(R.drawable.dpfj1);
+				}
 			}
+ 
 			return arg1;
 		}
 	}

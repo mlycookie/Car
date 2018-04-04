@@ -30,6 +30,8 @@ public class Cjlb implements Parcelable {
 			cjlb.jyxm = source.readString();
 			cjlb.isdpdt = source.readInt();
 			cjlb.isdp = source.readInt();
+			cjlb.isls = source.readInt();
+			cjlb.ispdzc = source.readInt();
 			return cjlb;
 		}
 	};
@@ -50,6 +52,8 @@ public class Cjlb implements Parcelable {
 		dest.writeString(jyxm);
 		dest.writeInt(isdpdt);
 		dest.writeInt(isdp);
+		dest.writeInt(isls);
+		dest.writeInt(ispdzc);
 	}
 
 	private String jyxm;
@@ -66,6 +70,24 @@ public class Cjlb implements Parcelable {
 	private int xzcdh;
 	private int isdpdt;
 	private int isdp;
+	private int isls;
+	private int ispdzc;
+
+	public int getIsls() {
+		return isls;
+	}
+
+	public void setIsls(int isls) {
+		this.isls = isls;
+	}
+
+	public int getIspdzc() {
+		return ispdzc;
+	}
+
+	public void setIspdzc(int ispdzc) {
+		this.ispdzc = ispdzc;
+	}
 
 	public int getIsdpdt() {
 		return isdpdt;

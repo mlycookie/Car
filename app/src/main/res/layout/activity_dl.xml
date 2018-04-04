@@ -25,6 +25,35 @@
 
     <!-- 涓讳綋鍐呭灞� -->
 
+    <!-- copyright灞傦紝濮嬬粓璺濆簳閮�50dp -->
+
+    <!--<ImageView-->
+        <!--android:layout_width="120dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|center_horizontal"-->
+        <!--android:layout_marginBottom="50dp"-->
+        <!--android:src="@drawable/dl_cp"/>-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:text="Copyright © 易车通"
+        android:textColor="#173652"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="24dp"
+        android:layout_marginRight="40dp"
+        android:text="版本:V3.1.1"
+        android:textColor="#173652"
+        android:textSize="12sp"
+        />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -49,7 +78,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4"/>
+                    android:layout_weight="4" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -60,7 +89,7 @@
                         android:layout_width="90dp"
                         android:layout_height="35dp"
                         android:layout_weight="0"
-                        android:src="@drawable/dl_yhm_l"/>
+                        android:src="@drawable/dl_yhm_l" />
 
                     <EditText
                         android:id="@+id/dl_loginid"
@@ -69,13 +98,13 @@
                         android:layout_marginLeft="8dp"
                         android:layout_weight="1"
                         android:background="@drawable/dl_srk"
-                        android:inputType="number"/>
+                        android:inputType="number" />
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"/>
+                    android:layout_weight="3" />
             </LinearLayout>
             <!-- 瀵嗙爜锛氬乏鍙冲悇绌�4/49鍜�3/49, 鏍囩90dp鍥哄畾锛屽叾浠栫┖闂翠娇鐢ㄨ緭鍏ユ濉厖 -->
 
@@ -87,7 +116,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4"/>
+                    android:layout_weight="4" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -98,7 +127,7 @@
                         android:layout_width="90dp"
                         android:layout_height="35dp"
                         android:layout_weight="0"
-                        android:src="@drawable/dl_mm_l"/>
+                        android:src="@drawable/dl_mm_l" />
 
                     <EditText
                         android:id="@+id/dl_loginpwd"
@@ -108,13 +137,13 @@
                         android:layout_weight="1"
                         android:background="@drawable/dl_srk"
                         android:inputType="number"
-                        android:password="true"/>
+                        android:password="true" />
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"/>
+                    android:layout_weight="3" />
             </LinearLayout>
 
             <LinearLayout
@@ -125,7 +154,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4"/>
+                    android:layout_weight="4" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -136,7 +165,7 @@
                         android:layout_width="90dp"
                         android:layout_height="39dp"
                         android:layout_weight="0"
-                        android:src="@drawable/dl_gw_l"/>
+                        android:src="@drawable/dl_gw_l" />
 
                     <org.angmarch.views.NiceSpinner
                         android:id="@+id/gw"
@@ -146,13 +175,13 @@
                         android:layout_weight="1"
                         android:textSize="15sp"
                         app:arrowTint="#0000ff"
-                        app:textTint="#0000ff"/>
+                        app:textTint="#0000ff" />
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"/>
+                    android:layout_weight="3" />
             </LinearLayout>
             <!-- 鐧诲綍鎸夐挳锛氬乏鍙冲悇绌�4/49鍜�3/49, 鍏朵粬绌洪棿浣跨敤鎸夐挳濉厖 -->
 
@@ -164,7 +193,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4"/>
+                    android:layout_weight="4" />
 
                 <ImageButton
                     android:layout_width="0dp"
@@ -173,12 +202,12 @@
                     android:background="@null"
                     android:onClick="dl"
                     android:scaleType="centerInside"
-                    android:src="@drawable/dl_dl"/>
+                    android:src="@drawable/dl_dl" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"/>
+                    android:layout_weight="3" />
             </LinearLayout>
         </LinearLayout>
         <!-- 璁颁綇瀵嗙爜涓庤嚜鍔ㄧ櫥褰曪紝濮嬬粓鍦ㄧ櫥褰曟寜閽笅14dp锛屾渶鍙充晶鍗�2/17锛屽楂樺浐瀹氾紝闂磋窛25dp -->
@@ -205,7 +234,7 @@
                     android:background="@null"
                     android:text="设置服务器地址"
                     android:textColor="#fff"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp" />
                 <!--<CheckBox-->
                 <!--android:layout_width="80dp"-->
                 <!--android:layout_height="20dp"-->
@@ -223,25 +252,8 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"/>
+                android:layout_weight="2" />
         </LinearLayout>
     </RelativeLayout>
 
-    <!-- copyright灞傦紝濮嬬粓璺濆簳閮�50dp -->
-
-    <!--<ImageView-->
-        <!--android:layout_width="120dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="bottom|center_horizontal"-->
-        <!--android:layout_marginBottom="50dp"-->
-        <!--android:src="@drawable/dl_cp"/>-->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="50dp"
-        android:text="Copyright © 易车通"
-        android:textColor="#173652"
-        android:textSize="12sp"
-        />
 </FrameLayout>

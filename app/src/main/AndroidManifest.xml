@@ -83,10 +83,10 @@
             android:name=".LsjyXmxzActivity"
             android:label="@string/title_activity_lsjyxmxz"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".LsjyZjmActivity"
-            android:label="@string/title_activity_lsjyzjm"
-            android:screenOrientation="portrait" />
+        <!--<activity-->
+            <!--android:name=".LsjyZjmActivity"-->
+            <!--android:label="@string/title_activity_lsjyzjm"-->
+            <!--android:screenOrientation="portrait" />-->
         <activity
             android:name=".LsjyXczdActivity"
             android:label="@string/title_activity_lsjy_xczd" />

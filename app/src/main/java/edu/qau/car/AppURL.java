@@ -8,7 +8,7 @@ public class AppURL {
     public static String SECOND_PATH_2 = "/ref/ThinkOutAccess.asmx";
 
 
-//    public static String BASE_URL = "http://112.253.16.82:98";
-    public static String BASE_URL = "http://172.21.1.8:98";
+    public static String BASE_URL = "http://112.253.16.82:90";
+//    public static String BASE_URL = "http://172.21.1.8:98";
     public static String SECOND_URL = SECOND_PATH_1;
 }
