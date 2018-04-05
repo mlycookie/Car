@@ -223,9 +223,9 @@ public class CjlbActivity extends Activity {
 		userInfo = (TextView) findViewById(R.id.user_info);
 
 		isLjy = PreferencesUtils.isLsy(this);
-		if(isLjy){
+//		if(isLjy){
 			userInfo.setText(PreferencesUtils.getUserInfo(this));
-		}
+//		}
 //		else{
 //			userInfo.setText(PreferencesUtils.getUserInfo(this));
 //		}
@@ -290,9 +290,14 @@ public class CjlbActivity extends Activity {
 				bean.setZt(Integer.parseInt(jsonObject.getString("iswg")));
 				bean.setIsdpdt(Integer.parseInt(jsonObject.getString("isdpdt")));
 				bean.setIsdp(Integer.parseInt(jsonObject.getString("isdp")));
-				bean.setIsls(Integer.parseInt(jsonObject.getString("isls")));
-				bean.setIspdzc(Integer.parseInt(jsonObject.getString("ispdzc")));
-				
+
+				try{
+					bean.setIsls(Integer.parseInt(jsonObject.getString("isls")));
+					bean.setIspdzc(Integer.parseInt(jsonObject.getString("ispdzc")));
+				}catch (Exception e){
+					e.printStackTrace();
+				}
+
 				String jycs = jsonObject.getString("jycs");
 				if (null == jycs || "".equals(jycs)) {
 					bean.setJycs("0");
@@ -415,6 +420,7 @@ public class CjlbActivity extends Activity {
 				} else if (list.get(arg0).getIsdp() == 3) {
 					holder.dp.setBackgroundResource(R.drawable.dpfj1);
 				}
+				holder.dp.getLayoutParams().height=(dp2px(CjlbActivity.this,42));
 			}
  
 			return arg1;
@@ -425,6 +431,11 @@ public class CjlbActivity extends Activity {
 
 		TextView jylsh, hphm, ccrq, hpzl, zt, syr, dpdt, dp,xczd,pdzc;
 
+	}
+
+	private int dp2px(Context context , float dpValue){
+		float scale = context.getResources().getDisplayMetrics().density;
+		return (int) (dpValue * scale + 0.5f);
 	}
 
 }

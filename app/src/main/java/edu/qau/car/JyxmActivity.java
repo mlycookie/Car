@@ -28,11 +28,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 
 import edu.qau.car.bean.Cjlb;
 import edu.qau.car.bean.Jyxm;
+import edu.qau.car.bean.Wgjyxm;
 
 public class JyxmActivity extends Activity implements OnClickListener {
 
@@ -384,7 +386,80 @@ public class JyxmActivity extends Activity implements OnClickListener {
                         intent.putExtra("qzdz", qzdz.toString());
                         intent.putExtra("syxz", syxz.toString());
                         intent.putExtra("flag", flag);
-                        context.startActivity(intent);
+
+
+                        getInfo(context,cjlb,intent);
+
+//                        context.startActivity(intent);
+                    } else {
+                        Toast.makeText(context, "访问网络失败", Toast.LENGTH_LONG)
+                                .show();
+                    }
+                } catch (JSONException e) {
+                    Toast.makeText(context, "访问网络失败", Toast.LENGTH_LONG).show();
+                }
+            }
+
+        });
+
+    }
+
+    public static void getInfo(final Context context, final Cjlb cjlb , final Intent intent) {
+        new WsAsyncTask().execute(new WsCallback() {
+
+            @Override
+            public String getUri() {
+                return null;
+            }
+
+            @Override
+            public String getNamespace() {
+                return null;
+            }
+
+            @Override
+            public String getMethodName() {
+                return null;
+            }
+
+            @Override
+            public String getXml() {
+                SharedPreferences sharedPreferences = PreferenceManager
+                        .getDefaultSharedPreferences(context);
+                String format = "<?xml version=\"1.0\" encoding=\"GBK\"?><root><vehispara><jylsh>%s</jylsh><jyjgbh>%s</jyjgbh><jyxm>%s</jyxm></vehispara></root>";
+                User user = PreferencesUtils.getUser(context);
+                String xml = String.format(format, cjlb.getJylsh(),
+                        user.getJCZBH(),
+                        PreferencesUtils.getJyxm(context));
+                Log.w("car", xml);
+
+                return xml;
+            }
+
+            @Override
+            public String getXtlb() {
+                return "17";
+            }
+
+            @Override
+            public String getJkxlh() {
+                return "00000";
+            }
+
+            @Override
+            public String getJkid() {
+                return "17F28";
+            }
+
+            @Override
+            public void callback(JSONObject obj) {
+                try {
+                    if (obj != null && obj.getBoolean("ok")) {
+                        JSONArray info = obj.getJSONArray("Table");
+                        if(info!=null && info.length() > 0 ){
+                            intent.putExtra("info", info.get(0).toString());
+                            context.startActivity(intent);
+                        }
                     } else {
                         Toast.makeText(context, "访问网络失败", Toast.LENGTH_LONG)
                                 .show();
@@ -472,6 +547,8 @@ public class JyxmActivity extends Activity implements OnClickListener {
             }
         }
 
+        Wgjyxm info =  gson.fromJson(getIntent().getStringExtra("info"), Wgjyxm.class);
+
         zzs1 = (ImageButton) findViewById(R.id.zzs1);
         zzs1.setOnClickListener(this);
         zzs2 = (ImageButton) findViewById(R.id.zzs2);
@@ -557,6 +634,103 @@ public class JyxmActivity extends Activity implements OnClickListener {
 
             }
         });
+
+        if(info!=null){
+            lcbds.setText(info.getLcbds());
+            switch (info.getZzs()){
+                case "1" :
+                    zzs1.setImageResource(R.drawable.yi_p);
+                    break;
+                case "2":
+                    zzs2.setImageResource(R.drawable.er_p);
+                    break;
+                case "3":
+                    zzs3.setImageResource(R.drawable.san_p);
+                    break;
+                case "4":
+                    zzs4.setImageResource(R.drawable.si_p);
+                    break;
+                case "5":
+                    zzs5.setImageResource(R.drawable.wu_p);
+                    break;
+                case "6":
+                    zzs6.setImageResource(R.drawable.liu_p);
+                    break;
+
+            }
+
+            mEt_qdxs.setText(info.getQdxs());
+
+            switch (info.getZczs()){
+                case "1" :
+                    zczs1.setImageResource(R.drawable.yi_p);
+                    break;
+                case "2":
+                    zczs2.setImageResource(R.drawable.er_p);
+                    break;
+                case "3":
+                    zczs3.setImageResource(R.drawable.san_p);
+                    break;
+                case "4":
+                    zczs4.setImageResource(R.drawable.si_p);
+                    break;
+                case "5":
+                    zczs5.setImageResource(R.drawable.wu_p);
+                    break;
+                case "6":
+                    zczs6.setImageResource(R.drawable.liu_p);
+                    break;
+
+            }
+
+            mEt_zczw.setText(info.getZczw());
+
+            for (int i = 0; i < zdlyList.size(); i++) {
+                if (zdlyList.get(i).getDMZ().equals(info.getZdly())) {
+                    zdly.setSelectedIndex(i);
+                    break;
+                }
+            }
+
+            for (int i = 0; i < qzdzList.size(); i++) {
+                if (qzdzList.get(i).getDMZ().equals(info.getQzdz())) {
+                    qzdz.setSelectedIndex(i);
+                    break;
+                }
+            }
+
+            for (int i = 0; i < qzslList.size(); i++) {
+                if (qzslList.get(i).equals(info.getQzsl())) {
+                    qzsl.setSelectedIndex(i);
+                    break;
+                }
+            }
+
+            for (int i = 0; i < syxzList.size(); i++) {
+                if (syxzList.get(i).getDMZ().equals(info.getSyxz())) {
+                    syxz.setSelectedIndex(i);
+                    break;
+                }
+            }
+
+            if("1".equals(info.getYgddtz())){
+                ygddtz.setChecked(true);
+            }
+
+            if("1".equals(info.getDlxj())){
+                dlxj.setChecked(true);
+            }
+
+            if("1".equals(info.getMz())){
+                mz.setChecked(true);
+            }
+
+            if("1".equals(info.getSzxz())){
+                szxz.setChecked(true);
+            }
+
+
+        }
     }
 
 }
