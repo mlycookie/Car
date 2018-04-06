@@ -640,21 +640,27 @@ public class JyxmActivity extends Activity implements OnClickListener {
             switch (info.getZzs()){
                 case "1" :
                     zzs1.setImageResource(R.drawable.yi_p);
+                    zzs = 1;
                     break;
                 case "2":
                     zzs2.setImageResource(R.drawable.er_p);
+                    zzs=2;
                     break;
                 case "3":
                     zzs3.setImageResource(R.drawable.san_p);
+                    zzs=3;
                     break;
                 case "4":
                     zzs4.setImageResource(R.drawable.si_p);
+                    zzs=4;
                     break;
                 case "5":
                     zzs5.setImageResource(R.drawable.wu_p);
+                    zzs=5;
                     break;
                 case "6":
                     zzs6.setImageResource(R.drawable.liu_p);
+                    zzs=6;
                     break;
 
             }
@@ -664,21 +670,27 @@ public class JyxmActivity extends Activity implements OnClickListener {
             switch (info.getZczs()){
                 case "1" :
                     zczs1.setImageResource(R.drawable.yi_p);
+                    zczs = 1;
                     break;
                 case "2":
                     zczs2.setImageResource(R.drawable.er_p);
+                    zczs = 2;
                     break;
                 case "3":
                     zczs3.setImageResource(R.drawable.san_p);
+                    zczs=3;
                     break;
                 case "4":
                     zczs4.setImageResource(R.drawable.si_p);
+                    zczs=4;
                     break;
                 case "5":
                     zczs5.setImageResource(R.drawable.wu_p);
+                    zczs=5;
                     break;
                 case "6":
                     zczs6.setImageResource(R.drawable.liu_p);
+                    zczs=6;
                     break;
 
             }
