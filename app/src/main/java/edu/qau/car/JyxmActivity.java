@@ -697,32 +697,60 @@ public class JyxmActivity extends Activity implements OnClickListener {
 
             mEt_zczw.setText(info.getZczw());
 
-            for (int i = 0; i < zdlyList.size(); i++) {
-                if (zdlyList.get(i).getDMZ().equals(info.getZdly())) {
-                    zdly.setSelectedIndex(i);
-                    break;
+            if(!TextUtils.isEmpty(info.getZdly())){
+                try{
+                    for (int i = 0; i < zdlyList.size(); i++) {
+                        if (zdlyList.get(i).getDMZ().equals(info.getZdly())) {
+                            zdly.setSelectedIndex(i);
+                            break;
+                        }
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
                 }
+
             }
 
-            for (int i = 0; i < qzdzList.size(); i++) {
-                if (qzdzList.get(i).getDMZ().equals(info.getQzdz())) {
-                    qzdz.setSelectedIndex(i);
-                    break;
+            if(!TextUtils.isEmpty(info.getQzdz())){
+                try{
+                    for (int i = 0; i < qzdzList.size(); i++) {
+                        if (qzdzList.get(i).getDMZ().equals(info.getQzdz())) {
+                            qzdz.setSelectedIndex(i);
+                            break;
+                        }
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
                 }
+
             }
 
-            for (int i = 0; i < qzslList.size(); i++) {
-                if (qzslList.get(i).equals(info.getQzsl())) {
-                    qzsl.setSelectedIndex(i);
-                    break;
+            if(!TextUtils.isEmpty(info.getQzsl())){
+                try{
+                    for (int i = 0; i < qzslList.size(); i++) {
+                        if (qzslList.get(i).equals(info.getQzsl())) {
+                            qzsl.setSelectedIndex(i);
+                            break;
+                        }
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
                 }
+
             }
 
-            for (int i = 0; i < syxzList.size(); i++) {
-                if (syxzList.get(i).getDMZ().equals(info.getSyxz())) {
-                    syxz.setSelectedIndex(i);
-                    break;
+            if(!TextUtils.isEmpty(info.getSyxz())){
+                try{
+                    for (int i = 0; i < syxzList.size(); i++) {
+                        if (syxzList.get(i).getDMZ().equals(info.getSyxz())) {
+                            syxz.setSelectedIndex(i);
+                            break;
+                        }
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
                 }
+
             }
 
             if("1".equals(info.getYgddtz())){
