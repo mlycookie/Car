@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -349,10 +350,15 @@ public class CjlbActivity extends Activity {
 				holder.dp = (TextView) arg1.findViewById(R.id.dp);
 				holder.xczd = (TextView) arg1.findViewById(R.id.xczd);
 				holder.pdzc = (TextView) arg1.findViewById(R.id.pdzc);
+				holder.ll_dpdt_dp = (LinearLayout) arg1.findViewById(R.id.ll_dpdt_dp);
+				holder.ll_xczd_pdzc = (LinearLayout) arg1.findViewById(R.id.ll_xczd_pdzc);
 				arg1.setTag(holder);
 			} else {
 				holder = (ViewHolder) arg1.getTag();
 			}
+
+			holder.ll_dpdt_dp.setVisibility(View.GONE);
+			holder.ll_xczd_pdzc.setVisibility(View.GONE);
 
 			holder.jylsh.setText(list.get(arg0).getJylsh());
 			holder.hphm.setText(list.get(arg0).getHphm());
@@ -371,42 +377,59 @@ public class CjlbActivity extends Activity {
 
 			if (list.get(arg0).getIsdpdt() == 0) {
 				holder.dpdt.setBackgroundResource(R.drawable.dpdtbjc);
+				holder.ll_dpdt_dp.setVisibility(View.VISIBLE);
 			} else if (list.get(arg0).getIsdpdt() == 1) {
 				holder.dpdt.setBackgroundResource(R.drawable.dpdtdjc);
+				holder.ll_dpdt_dp.setVisibility(View.VISIBLE);
 			} else if (list.get(arg0).getIsdpdt() == 2) {
 				holder.dpdt.setBackgroundResource(R.drawable.dpdtyjc);
+				holder.ll_dpdt_dp.setVisibility(View.VISIBLE);
 			} else if (list.get(arg0).getIsdpdt() == 3) {
 				holder.dpdt.setBackgroundResource(R.drawable.dpdtfj);
+				holder.ll_dpdt_dp.setVisibility(View.VISIBLE);
 			}
 
 			if(isLjy){
 				if (list.get(arg0).getIsdp() == 0) {
 					holder.dp.setBackgroundResource(R.drawable.dpbjc);
+					holder.ll_dpdt_dp.setVisibility(View.VISIBLE);
 				} else if (list.get(arg0).getIsdp() == 1) {
+					holder.ll_dpdt_dp.setVisibility(View.VISIBLE);
 					holder.dp.setBackgroundResource(R.drawable.dpdjc);
 				} else if (list.get(arg0).getIsdp() == 2) {
+					holder.ll_dpdt_dp.setVisibility(View.VISIBLE);
 					holder.dp.setBackgroundResource(R.drawable.dpyjc);
 				} else if (list.get(arg0).getIsdp() == 3) {
+					holder.ll_dpdt_dp.setVisibility(View.VISIBLE);
 					holder.dp.setBackgroundResource(R.drawable.dpfj);
 				}
 
 				if (list.get(arg0).getIsls() == 0) {
 					holder.xczd.setBackgroundResource(R.drawable.xczdbjc);
+					holder.ll_xczd_pdzc.setVisibility(View.VISIBLE);
 				} else if (list.get(arg0).getIsls() == 1) {
+					holder.ll_xczd_pdzc.setVisibility(View.VISIBLE);
 					holder.xczd.setBackgroundResource(R.drawable.xczddjc);
+					holder.ll_xczd_pdzc.setVisibility(View.VISIBLE);
 				} else if (list.get(arg0).getIsls() == 2) {
 					holder.xczd.setBackgroundResource(R.drawable.xczdyjc);
+					holder.ll_xczd_pdzc.setVisibility(View.VISIBLE);
 				} else if (list.get(arg0).getIsls() == 3) {
+					holder.ll_xczd_pdzc.setVisibility(View.VISIBLE);
 					holder.xczd.setBackgroundResource(R.drawable.xczdfj);
 				}
 
 				if (list.get(arg0).getIspdzc() == 0) {
 					holder.pdzc.setBackgroundResource(R.drawable.pdzcbjc);
+					holder.ll_xczd_pdzc.setVisibility(View.VISIBLE);
 				} else if (list.get(arg0).getIspdzc() == 1) {
+					holder.ll_xczd_pdzc.setVisibility(View.VISIBLE);
 					holder.pdzc.setBackgroundResource(R.drawable.pdzcdjc);
 				} else if (list.get(arg0).getIspdzc() == 2) {
+					holder.ll_xczd_pdzc.setVisibility(View.VISIBLE);
 					holder.pdzc.setBackgroundResource(R.drawable.pdzcyjc);
 				} else if (list.get(arg0).getIspdzc() == 3) {
+					holder.ll_xczd_pdzc.setVisibility(View.VISIBLE);
 					holder.pdzc.setBackgroundResource(R.drawable.pdzcfj);
 				}
 				
@@ -430,6 +453,7 @@ public class CjlbActivity extends Activity {
 	private class ViewHolder {
 
 		TextView jylsh, hphm, ccrq, hpzl, zt, syr, dpdt, dp,xczd,pdzc;
+		LinearLayout ll_dpdt_dp,ll_xczd_pdzc;
 
 	}
 

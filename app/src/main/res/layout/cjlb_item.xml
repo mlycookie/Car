@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/jylsh"
@@ -15,7 +16,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:baselineAligned="false" >
+        android:baselineAligned="false">
 
         <TextView
             android:id="@+id/hphm"
@@ -37,7 +38,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:baselineAligned="false" >
+        android:baselineAligned="false">
 
         <TextView
             android:id="@+id/hpzl"
@@ -55,39 +56,46 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/ll_dpdt_dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:baselineAligned="false" >
+        android:baselineAligned="false">
 
         <TextView
             android:id="@+id/dpdt"
             android:layout_width="0dp"
+            android:gravity="center_vertical"
+            tools:text="底盘动太"
             android:layout_height="@dimen/cjlb_height"
-            android:layout_weight="37" 
-            />
+            android:layout_weight="37" />
 
         <TextView
             android:id="@+id/dp"
+            android:gravity="center_vertical"
+            tools:text="底盘检测"
             android:layout_width="0dp"
             android:layout_height="@dimen/cjlb_height"
-            android:layout_weight="42"
-            />
+            android:layout_weight="42" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/ll_xczd_pdzc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:baselineAligned="false" >
+        android:baselineAligned="false">
 
         <TextView
             android:id="@+id/xczd"
             android:layout_width="0dp"
+            tools:text="行车制动"
+            android:gravity="center_vertical"
             android:layout_height="@dimen/cjlb_height"
-            android:layout_weight="37"
-            />
+            android:layout_weight="37" />
 
         <TextView
             android:id="@+id/pdzc"
+            tools:text="pdzc"
+            android:gravity="center_vertical"
             android:layout_width="0dp"
             android:layout_height="@dimen/cjlb_height2"
             android:layout_weight="42" />
