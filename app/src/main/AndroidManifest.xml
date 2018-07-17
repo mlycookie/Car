@@ -83,14 +83,15 @@
             android:name=".LsjyXmxzActivity"
             android:label="@string/title_activity_lsjyxmxz"
             android:screenOrientation="portrait" />
-        <!--<activity-->
-            <!--android:name=".LsjyZjmActivity"-->
-            <!--android:label="@string/title_activity_lsjyzjm"-->
-            <!--android:screenOrientation="portrait" />-->
+        <!-- <activity -->
+        <!-- android:name=".LsjyZjmActivity" -->
+        <!-- android:label="@string/title_activity_lsjyzjm" -->
+        <!-- android:screenOrientation="portrait" /> -->
         <activity
             android:name=".LsjyXczdActivity"
             android:label="@string/title_activity_lsjy_xczd" />
-        <activity android:name=".LsjyPdzcActivity"></activity>
+        <activity android:name=".LsjyPdzcActivity" />
+        <activity android:name=".XxlrActivity"></activity>
     </application>
 
 </manifest>

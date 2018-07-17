@@ -75,8 +75,14 @@ public class DlActivity extends Activity implements WsCallback {
                 editor.putString("user", userJson.toString());
                 editor.commit();
 
-                Intent intent  = new Intent(this, ZjmActivity.class);
-                startActivity(intent);
+                if(7 == rylb[gw.getSelectedIndex()]){
+                    Intent intent  = new Intent(this, XxlrActivity.class);
+                    startActivity(intent);
+                }else{
+                    Intent intent  = new Intent(this, ZjmActivity.class);
+                    startActivity(intent);
+                }
+
                 
 //                switch ( rylb[gw.getSelectedIndex()]){
 //                    case 15:
@@ -110,8 +116,8 @@ public class DlActivity extends Activity implements WsCallback {
 
     private NiceSpinner gw;
     private LinkedList<String> gwList = new LinkedList<String>(Arrays.asList(
-            "车辆外观检验员", "底盘动态检验员", "车辆底盘检验员", "路试员"));
-    private int[] rylb = new int[]{10, 11, 12, 15};
+            "车辆外观检验员", "底盘动态检验员", "车辆底盘检验员", "路试员","信息登录员"));
+    private int[] rylb = new int[]{10, 11, 12, 15, 7};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

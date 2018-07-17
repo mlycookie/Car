@@ -19,6 +19,7 @@ public class PreferencesUtils {
 		rylb.put("11", "底盘动态");
 		rylb.put("12", "车辆底盘");
 		rylb.put("15", "路试员");
+		rylb.put("07","信息登录员");
 
 		jyxm.put("10", "wgjcxm");
 		jyxm.put("11", "dtdpjyxm");

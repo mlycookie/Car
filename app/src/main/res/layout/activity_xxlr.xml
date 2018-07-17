@@ -1,0 +1,203 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res/edu.qau.car"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <include
+        layout="@layout/ztl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/layout_margin_bottom"
+        android:layout_marginLeft="@dimen/layout_margin_left"
+        android:layout_marginRight="@dimen/layout_margin_right"
+        android:layout_marginTop="@dimen/layout_margin_top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/wz_height"
+                android:layout_weight="4"
+                android:text="号牌号码"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_hphm"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="7"
+                android:background="@drawable/dl_srk" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/wz_height"
+                android:layout_weight="4"
+                android:text="号牌种类"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/spinner_hpzl"
+                android:layout_width="0dp"
+                android:layout_height="39dp"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="7"
+                android:textSize="12sp"
+                app:arrowTint="#0000ff"
+                app:textTint="#0000ff"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/wz_height"
+                android:layout_weight="4"
+                android:text="车辆识别代号"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_clsbdh"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="7"
+                android:background="@drawable/dl_srk" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/wz_height"
+                android:layout_weight="4"
+                android:text="所有人"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_syr"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="7"
+                android:background="@drawable/dl_srk" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/wz_height"
+                android:layout_weight="4"
+                android:text="车辆状态"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/spinner_clzt"
+                android:layout_width="0dp"
+                android:layout_height="39dp"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="7"
+                android:textSize="12sp"
+                app:arrowTint="#0000ff"
+                app:textTint="#0000ff"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/wz_height"
+                android:layout_weight="4"
+                android:text="备注"
+                android:layout_gravity="top"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+            <EditText
+                android:id="@+id/et_bz"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="7"
+                android:minLines="3"
+                android:paddingLeft="4dp"
+                android:paddingTop="4dp"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:background="@drawable/dl_srk" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:onClick="next"
+            android:scaleType="centerInside"
+            android:src="@drawable/jyxm_tj"/>
+    </LinearLayout>
+
+</FrameLayout>
